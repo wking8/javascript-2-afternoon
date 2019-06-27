@@ -15,7 +15,7 @@
 */
 
 let me = {
-  name: 'Wyatt', 
+  name: 'Wyatt',
   age: 36
 }
 
@@ -122,13 +122,20 @@ let methodCollection = {};
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-//Code Here
+methodCollection.alertHello = function () {
+  alert('hello')
+}
+
+methodCollection.logHello = function () {
+  console.log('hello')
+}
 
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+// methodCollection.alertHello()  COMMENTED OUT FOR SAVING AND TESTING PURPOSES.  DONT WANT ALERTS POPPING UP
+methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -137,7 +144,15 @@ let methodCollection = {};
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name, birthday, ssn) {
+  return {
+    name,
+    birthday,
+    ssn
+  }
+}
+
+makePerson('Wyatt', 1982, 123456789)
 
 ////////// PROBLEM 7 //////////
 
@@ -146,4 +161,12 @@ let methodCollection = {};
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode) {
+  return {
+    cardNumber,
+    expirationDate,
+    securityCode
+  }
+}
+
+makeCard(12345678, '07/2020', 1234)
